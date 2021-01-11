@@ -1,0 +1,27 @@
+{
+  "name": "bowling-game-kata",
+  "version": "1.0.0",
+  "description": "Bowling Game TDD Kata from Uncle Bob",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thawkin3/bowling-game-kata.git"
+  },
+  "keywords": [
+    "bowling",
+    "game",
+    "kata",
+    "tdd",
+    "uncle",
+    "bob"
+  ],
+  "author": "Tyler Hawkins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thawkin3/bowling-game-kata/issues"
+  },
+  "homepage": "https://github.com/thawkin3/bowling-game-kata#readme"
+}
