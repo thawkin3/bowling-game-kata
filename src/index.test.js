@@ -1,13 +1,25 @@
 import { Game } from './index.js'
 
 describe('Bowling Game', () => {
-  it('returns 0 for a game of all gutter balls', () => {
-    const game = new Game()
+  let game
 
-    for (let i = 0; i < 20; i++) {
-      game.roll(0)
+  beforeEach(() => {
+    game = new Game()
+  })
+
+  const rollMany = (n, pins) => {
+    for (let i = 0; i < n; i++) {
+      game.roll(pins)
     }
+  }
 
-    expect(game.score()).toEqual(0)
+  it('returns 0 for a game of all gutter balls', () => {
+    rollMany(20, 0)
+    expect(game.getScore()).toEqual(0)
+  })
+
+  it('returns 20 for a game with 1 pin hit on every roll', () => {
+    rollMany(20, 1)
+    expect(game.getScore()).toEqual(20)
   })
 })
