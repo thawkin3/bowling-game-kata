@@ -46,4 +46,9 @@ describe('Bowling Game', () => {
     rollMany(16, 0)
     expect(game.getScore()).toEqual(24)
   })
+
+  it('returns 300 for a perfect game of 12 strikes', () => {
+    rollMany(12, 10)
+    expect(game.getScore()).toEqual(300)
+  })
 })
