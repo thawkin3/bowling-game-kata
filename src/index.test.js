@@ -18,6 +18,10 @@ describe('Bowling Game', () => {
     game.roll(5)
   }
 
+  const rollStrike = () => {
+    game.roll(10)
+  }
+
   it('returns 0 for a game of all gutter balls', () => {
     rollMany(20, 0)
     expect(game.getScore()).toEqual(0)
@@ -33,5 +37,13 @@ describe('Bowling Game', () => {
     game.roll(3)
     rollMany(17, 0)
     expect(game.getScore()).toEqual(16)
+  })
+
+  it('handles getting one strike in a game', () => {
+    rollStrike()
+    game.roll(3)
+    game.roll(4)
+    rollMany(16, 0)
+    expect(game.getScore()).toEqual(24)
   })
 })
