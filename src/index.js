@@ -5,11 +5,10 @@ export class Game {
   }
 
   roll(pins) {
-    this.score += pins
     this.rolls[this.currentRoll++] = pins
   }
 
-  getScore() {
+  score() {
     let score = 0
     let frameIndex = 0
     for (let frame = 0; frame < 10; frame++) {
